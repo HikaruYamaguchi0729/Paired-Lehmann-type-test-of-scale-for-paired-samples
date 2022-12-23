@@ -1,12 +1,12 @@
 # Test the hypothesis that two dependent variables (x,y) have equal variances.
 # Paired Lehmann-type statistic estimate the probability P(|x1 - x2| < |y1 - y2|).
 
-paired.Lehmann.Var.test <- function(x, y = NULL, method = c("NA", "PB"), alternative = c("two.sided","less","greater"), nboot = 1000){
+paired.Lehmann.Var.test <- function(x, y = NULL, method = c("NAP", "PB"), alternative = c("two.sided","less","greater"), nboot = 1000){
   ### Paired Lehmann-type test to assess the difference between two scale parameters in paired data
   # x is first sample.
   # y is second sample.
-  # "NA" denotes the p-value based on the normal approximation
-  # "PB" denotes the p-value based on the percentile bootstrap
+  # "NAP" denotes the p-value based on the normal approximation (NAP)
+  # "PB" denotes the p-value based on the percentile bootstrap (PB)
   # nboot is the number of bootstrap samples. 
   
   alternative <- match.arg(alternative)  ## alternative hypothesis
