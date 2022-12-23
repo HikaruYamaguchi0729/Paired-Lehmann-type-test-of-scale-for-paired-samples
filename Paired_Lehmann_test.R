@@ -67,12 +67,12 @@ paired.Lehmann.Var.test <- function(x, y = NULL, method = c("NAP", "PB"), altern
 ## Example 1  (Bick R, Adams T, Schmalhorst W. (1976). Bleeding times, platelet adhesion, and aspirin. American Journal of Clinical Pathology. 65: 69–72)
 X <- matrix(c(270, 150, 270, 420, 202, 255, 165, 220, 305, 210, 240, 300, 300,  70, 265, 215,  95,  85, 200,
               525, 570, 190, 395, 370, 210, 490, 250, 360, 285, 630, 385, 195, 295, 275, 270, 295, 535, 345), nrow = 19, ncol = 2)
-paired.Lehmann.Var.test(X[,1],X[,2], method = "NA", alternative = "less")                  # p-value = 0.05858
-paired.Lehmann.Var.test(X[,1],X[,2], method = "PB", alternative = "less",nboot = 1000000)  # p-value = 0.06187 if set.seed(1234)
+paired.Lehmann.Var.test(X[,1],X[,2], method = "NAP", alternative = "less")                  # p-value = 0.05858
+paired.Lehmann.Var.test(X[,1],X[,2], method = "PB",  alternative = "less",nboot = 1000000)  # p-value = 0.06187 if set.seed(1234)
 
 
 ## Example 2 (Bick R, Adams T, Schmalhorst W. (1976). Bleeding times, platelet adhesion, and aspirin. American Journal of Clinical Pathology. 65: 69–72)
 X <- matrix(c(67, 74, 90, 82, 90, 82, 62, 76, 89, 84, 83, 94, 84, 69, 76, 77, 72, 93, 89,
               67, 82, 73, 80, 78, 84, 57, 63, 93, 89, 83, 97, 90, 40, 89, 61, 90, 92, 84), nrow = 19, ncol = 2)
-paired.Lehmann.Var.test(X[,1],X[,2], method = "NA", alternative = "less")                  # p-value = 0.04886
-paired.Lehmann.Var.test(X[,1],X[,2], method = "PB", alternative = "less",nboot = 1000000)  # p-value = 0.05183 if set.seed(1234)
+paired.Lehmann.Var.test(X[,1],X[,2], method = "NAP", alternative = "less")                  # p-value = 0.04886
+paired.Lehmann.Var.test(X[,1],X[,2], method = "PB",  alternative = "less",nboot = 1000000)  # p-value = 0.05183 if set.seed(1234)
